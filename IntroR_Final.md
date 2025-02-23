@@ -61,7 +61,7 @@ ggplot(us_contagious_diseases, aes(x = disease)) +
   labs(title = "Frequency of Contagious Diseases", x = "Disease", y = "Frequency") 
 ```
 
-![](<IntroR_Final_files/Plots/unnamed-chunk-3-1.png>)
+![](<Plots/unnamed-chunk-3-1.png>)
 (d).
 Computer the 0.1, 0.5, 0.9 quantiles of the population for each type of
 disease. Write a paragraph to compare the quantiles of the population
@@ -224,15 +224,7 @@ ggplot(texas_data, aes(x = year, y = ave_count, color = disease)) +
   geom_point() + geom_smooth()
 ```
 
-    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-    ## Warning: Removed 4 rows containing non-finite outside the scale range
-    ## (`stat_smooth()`).
-
-    ## Warning: Removed 4 rows containing missing values or values outside the scale range
-    ## (`geom_point()`).
-
-![](<IntroR_Final_files/Plots/unnamed-chunk-7-1.png>)
+![](<Plots/unnamed-chunk-7-1.png>)
 
 ``` r
   labs(x = "Year", y = "Average Reported Case Count per Weeks Reporting") +
@@ -253,22 +245,13 @@ ggplot(texas_data_filtered, aes(x = year, y = ave_count, color = disease)) +
   geom_point() + geom_smooth()
 ```
 
-    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-    ## Warning: Removed 2 rows containing non-finite outside the scale range
-    ## (`stat_smooth()`).
-
-    ## Warning: Removed 2 rows containing missing values or values outside the scale range
-    ## (`geom_point()`).
-
-![](<IntroR_Final_files/Plots/unnamed-chunk-8-1.png>)
+![](<Plots/unnamed-chunk-8-1.png>)
 
 ``` r
   labs(x = "Year", y = "Average Reported Case Count per Weeks Reporting") +
   scale_color_discrete(name = "Disease")
 ```
 
-    ## NULL
 
 4.  Redo Problem 3 for the State of New York. Write a paragraph to
     compare the results of the two states. The paragraph should clearly
@@ -312,15 +295,7 @@ ggplot(new_york_data, aes(x = year, y = ave_count, color = disease)) +
   geom_point() + geom_smooth()
 ```
 
-    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-    ## Warning: Removed 22 rows containing non-finite outside the scale range
-    ## (`stat_smooth()`).
-
-    ## Warning: Removed 22 rows containing missing values or values outside the scale range
-    ## (`geom_point()`).
-
-![](<IntroR_Final_files/Plots/unnamed-chunk-9-1.png>)
+![](<Plots/unnamed-chunk-9-1.png>)
 
 ``` r
 # Plot removing Mumps disease
@@ -332,15 +307,7 @@ ggplot(new_york_data_filtered, aes(x = year, y = ave_count, color = disease)) +
   geom_point() + geom_smooth()
 ```
 
-    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-    ## Warning: Removed 19 rows containing non-finite outside the scale range
-    ## (`stat_smooth()`).
-
-    ## Warning: Removed 19 rows containing missing values or values outside the scale range
-    ## (`geom_point()`).
-
-![](IntroR_Final_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->
+![](<Plots/unnamed-chunk-9-2.png>)
 **Comparing the data for both states Texas and New York the plots show
 variations in average count for each disease. When Measles is filtered
 out the plots are magnified and we can see up close the trends of data.
@@ -397,9 +364,6 @@ disease_count_density <- us_contagious_diseases %>%
   summarise(density = sum(count) / sum(population))
 ```
 
-    ## `summarise()` has grouped output by 'state'. You can override using the
-    ## `.groups` argument.
-
 ``` r
 # View the result
 print(disease_count_density)
@@ -436,9 +400,6 @@ total_count_by_state_year <- us_contagious_diseases %>%
   arrange(desc(total_count))
 ```
 
-    ## `summarise()` has grouped output by 'state'. You can override using the
-    ## `.groups` argument.
-
 ``` r
 # Get the top three (state, year) pairs with the largest total count of all diseases
 top_total_count <- head(total_count_by_state_year, 3)
@@ -465,9 +426,6 @@ disease_count_density <- us_contagious_diseases %>%
   summarise(density = sum(count) / sum(population)) %>%
   arrange(desc(density))
 ```
-
-    ## `summarise()` has grouped output by 'state', 'year'. You can override using the
-    ## `.groups` argument.
 
 ``` r
 # Get the top three (state, year) pairs with the largest disease count density
