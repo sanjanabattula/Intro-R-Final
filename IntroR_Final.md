@@ -61,7 +61,8 @@ ggplot(us_contagious_diseases, aes(x = disease)) +
   labs(title = "Frequency of Contagious Diseases", x = "Disease", y = "Frequency") 
 ```
 
-![](IntroR_Final_files/figure-gfm/unnamed-chunk-3-1.png)<!-- --> (d).
+![](<IntroR_Final_files/Plots/unnamed-chunk-3-1.png>)
+(d).
 Computer the 0.1, 0.5, 0.9 quantiles of the population for each type of
 disease. Write a paragraph to compare the quantiles of the population
 across the diseases.
@@ -231,7 +232,7 @@ ggplot(texas_data, aes(x = year, y = ave_count, color = disease)) +
     ## Warning: Removed 4 rows containing missing values or values outside the scale range
     ## (`geom_point()`).
 
-![](IntroR_Final_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](<IntroR_Final_files/Plots/unnamed-chunk-7-1.png>)
 
 ``` r
   labs(x = "Year", y = "Average Reported Case Count per Weeks Reporting") +
@@ -260,7 +261,7 @@ ggplot(texas_data_filtered, aes(x = year, y = ave_count, color = disease)) +
     ## Warning: Removed 2 rows containing missing values or values outside the scale range
     ## (`geom_point()`).
 
-![](IntroR_Final_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](<IntroR_Final_files/Plots/unnamed-chunk-8-1.png>)
 
 ``` r
   labs(x = "Year", y = "Average Reported Case Count per Weeks Reporting") +
@@ -319,7 +320,7 @@ ggplot(new_york_data, aes(x = year, y = ave_count, color = disease)) +
     ## Warning: Removed 22 rows containing missing values or values outside the scale range
     ## (`geom_point()`).
 
-![](IntroR_Final_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](<IntroR_Final_files/Plots/unnamed-chunk-9-1.png>)
 
 ``` r
 # Plot removing Mumps disease
